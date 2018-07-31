@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180731 14:32:46.143" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
+<suite source="/home/gigavoice/testsRob/open-browser.robot" id="s1" name="Open-Browser">
+<test id="s1-t1" name="Lunch browser">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20180731 14:32:46.305" level="INFO">Opening browser 'ff' to base url 'https://www.google.com'</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20180731 14:32:47.524" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20180731 14:32:47.524" starttime="20180731 14:32:47.520"></status>
+</kw>
+<msg timestamp="20180731 14:32:47.524" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20180731 14:32:47.526" level="FAIL">WebDriverException: Message: Process unexpectedly closed with status 1
+</msg>
+<status status="FAIL" endtime="20180731 14:32:47.526" starttime="20180731 14:32:46.304"></status>
+</kw>
+<doc>This is some info about the test</doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="FAIL" endtime="20180731 14:32:47.533" critical="yes" starttime="20180731 14:32:46.303">WebDriverException: Message: Process unexpectedly closed with status 1
+</status>
+</test>
+<doc>This is some info about the test suit</doc>
+<status status="FAIL" endtime="20180731 14:32:47.535" starttime="20180731 14:32:46.146"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">Smoke</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Open-Browser" pass="0">Open-Browser</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20180731 14:32:47.524" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+</errors>
+</robot>

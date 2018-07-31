@@ -1,0 +1,18 @@
+*** Settings ***
+
+Documentation and resource for keywords 
+
+Library    Selenium2Library
+
+*** Variables ***
+
+${URL}      https://www.google.com
+${BROWSER}  firefox
+${DELAY_TIME} 2
+
+
+*** Keywords ***
+
+Open Google Page
+     Open browser    ${BROWSER}  ${URL}
+     Maximize browser window 
