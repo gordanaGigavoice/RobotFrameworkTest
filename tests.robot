@@ -13,7 +13,10 @@ ${PASS}		pass.1234
 ${Email}	xpath=//*[@id="email"]
 *** Test Cases ***
 Launching the browser 
-        Open Browser	${URL}	${BROWSER}
+        
+	
+
+	Open Browser	${URL}	${BROWSER}	None	http://localhost:4445/wd/hub
 	Maximize Browser Window
 
 LogIn page

@@ -1,47 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20180731 14:32:46.143" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
-<suite source="/home/gigavoice/testsRob/open-browser.robot" id="s1" name="Open-Browser">
-<test id="s1-t1" name="Lunch browser">
+<robot generated="20180807 08:43:48.612" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
+<suite source="/home/gigavoice/testsRob/test2.robot" id="s1" name="Test2">
+<test id="s1-t1" name="Lunch Browser">
+<kw name="Set Environment Variable" library="OperatingSystem">
+<doc>Sets an environment variable to a specified value.</doc>
+<arguments>
+<arg>chromedriver</arg>
+<arg>/home/gigavoice/testsRob/chromedriver</arg>
+</arguments>
+<msg timestamp="20180807 08:43:48.783" level="INFO">Environment variable 'chromedriver' set to value '/home/gigavoice/testsRob/chromedriver'.</msg>
+<status status="PASS" endtime="20180807 08:43:48.783" starttime="20180807 08:43:48.783"></status>
+</kw>
 <kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
+<doc>Opens a new browser instance to the given ``url``.</doc>
 <arguments>
 <arg>https://www.google.com</arg>
-<arg>ff</arg>
+<arg>chrome</arg>
 </arguments>
-<msg timestamp="20180731 14:32:46.305" level="INFO">Opening browser 'ff' to base url 'https://www.google.com'</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20180731 14:32:47.524" level="FAIL">No browser is open</msg>
-<status status="FAIL" endtime="20180731 14:32:47.524" starttime="20180731 14:32:47.520"></status>
+<msg timestamp="20180807 08:43:48.784" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<status status="PASS" endtime="20180807 08:43:55.380" starttime="20180807 08:43:48.784"></status>
 </kw>
-<msg timestamp="20180731 14:32:47.524" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
-<msg timestamp="20180731 14:32:47.526" level="FAIL">WebDriverException: Message: Process unexpectedly closed with status 1
-</msg>
-<status status="FAIL" endtime="20180731 14:32:47.526" starttime="20180731 14:32:46.304"></status>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180807 08:43:55.548" starttime="20180807 08:43:55.381"></status>
 </kw>
-<doc>This is some info about the test</doc>
-<tags>
-<tag>Smoke</tag>
-</tags>
-<status status="FAIL" endtime="20180731 14:32:47.533" critical="yes" starttime="20180731 14:32:46.303">WebDriverException: Message: Process unexpectedly closed with status 1
-</status>
+<status status="PASS" endtime="20180807 08:43:55.548" critical="yes" starttime="20180807 08:43:48.781"></status>
 </test>
-<doc>This is some info about the test suit</doc>
-<status status="FAIL" endtime="20180731 14:32:47.535" starttime="20180731 14:32:46.146"></status>
+<doc>Tests to verify that the browser lunches</doc>
+<status status="PASS" endtime="20180807 08:43:55.549" starttime="20180807 08:43:48.614"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="0">Critical Tests</stat>
-<stat fail="1" pass="0">All Tests</stat>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
 </total>
 <tag>
-<stat fail="1" pass="0">Smoke</stat>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="Open-Browser" pass="0">Open-Browser</stat>
+<stat fail="0" id="s1" name="Test2" pass="1">Test2</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20180731 14:32:47.524" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
 </errors>
 </robot>

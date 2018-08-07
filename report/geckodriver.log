@@ -1,0 +1,4 @@
+1533558833073	geckodriver	INFO	geckodriver 0.20.0
+1533558833141	geckodriver	INFO	Listening on 127.0.0.1:36952
+1533558834034	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.AL4LEwkRMPE5"
+Running Firefox as root in a regular user's session is not supported.  ($HOME is /var/lib/jenkins which is owned by jenkins.)

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180807 08:49:39.614" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
+<suite source="/home/gigavoice/testsRob/tests.robot" id="s1" name="Tests">
+<test id="s1-t1" name="Launching the browser">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>None</arg>
+<arg>http://localhost:4445/wd/hub</arg>
+</arguments>
+<msg timestamp="20180807 08:49:40.636" level="INFO">Opening browser 'chrome' to base url 'https://www.park-your-truck.com' through remote server at 'http://localhost:4445/wd/hub'.</msg>
+<status status="PASS" endtime="20180807 08:50:30.545" starttime="20180807 08:49:40.635"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180807 08:50:30.737" starttime="20180807 08:50:30.546"></status>
+</kw>
+<status status="PASS" endtime="20180807 08:50:30.737" critical="yes" starttime="20180807 08:49:40.634"></status>
+</test>
+<test id="s1-t2" name="LogIn page">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>css=html body.cms-home.cms-index-index.page-layout-1column div.page-wrapper div#ssieugdpr-banner.ssieugdpr-banner.ssieugdpr--center center button#gdprok</arg>
+</arguments>
+<status status="PASS" endtime="20180807 08:50:31.410" starttime="20180807 08:50:30.759"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>css=html body.cms-home.cms-index-index.page-layout-1column div.page-wrapper div#ssieugdpr-banner.ssieugdpr-banner.ssieugdpr--center center button#gdprok</arg>
+</arguments>
+<msg timestamp="20180807 08:50:31.410" level="INFO">Clicking element 'css=html body.cms-home.cms-index-index.page-layout-1column div.page-wrapper div#ssieugdpr-banner.ssieugdpr-banner.ssieugdpr--center center button#gdprok'.</msg>
+<status status="PASS" endtime="20180807 08:50:32.618" starttime="20180807 08:50:31.410"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>css=body &gt; div.page-wrapper &gt; div &gt; div &gt; div.frontpage-reg-request-btns &gt; a</arg>
+<arg>2</arg>
+</arguments>
+<status status="PASS" endtime="20180807 08:50:32.697" starttime="20180807 08:50:32.618"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>css=body &gt; div.page-wrapper &gt; div &gt; div &gt; div.frontpage-reg-request-btns &gt; a</arg>
+</arguments>
+<msg timestamp="20180807 08:50:32.698" level="INFO">Clicking element 'css=body &gt; div.page-wrapper &gt; div &gt; div &gt; div.frontpage-reg-request-btns &gt; a'.</msg>
+<status status="PASS" endtime="20180807 08:50:34.080" starttime="20180807 08:50:32.697"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Email}</arg>
+<arg>${USERNAME}</arg>
+</arguments>
+<msg timestamp="20180807 08:50:34.081" level="INFO">Typing text 'gdonev@ssidecisions.com' into text field 'xpath=//*[@id="email"]'.</msg>
+<status status="PASS" endtime="20180807 08:50:35.317" starttime="20180807 08:50:34.080"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="pass"]</arg>
+<arg>${PASS}</arg>
+</arguments>
+<msg timestamp="20180807 08:50:35.319" level="INFO">Typing text 'pass.1234' into text field 'xpath=//*[@id="pass"]'.</msg>
+<status status="PASS" endtime="20180807 08:50:35.738" starttime="20180807 08:50:35.318"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>css=#send2</arg>
+</arguments>
+<msg timestamp="20180807 08:50:35.739" level="INFO">Clicking button 'css=#send2'.</msg>
+<status status="PASS" endtime="20180807 08:50:37.568" starttime="20180807 08:50:35.738"></status>
+</kw>
+<status status="PASS" endtime="20180807 08:50:37.568" critical="yes" starttime="20180807 08:50:30.758"></status>
+</test>
+<test id="s1-t3" name="LogOut page">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>css=body &gt; div.page-wrapper &gt; header &gt; div.header.content &gt; span.signin-logout &gt; a</arg>
+</arguments>
+<msg timestamp="20180807 08:50:37.570" level="INFO">Clicking element 'css=body &gt; div.page-wrapper &gt; header &gt; div.header.content &gt; span.signin-logout &gt; a'.</msg>
+<status status="PASS" endtime="20180807 08:50:39.474" starttime="20180807 08:50:37.570"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180807 08:50:39.535" starttime="20180807 08:50:39.474"></status>
+</kw>
+<status status="PASS" endtime="20180807 08:50:39.535" critical="yes" starttime="20180807 08:50:37.569"></status>
+</test>
+<doc>Tests to verify that the browser lunches</doc>
+<status status="PASS" endtime="20180807 08:50:39.536" starttime="20180807 08:49:39.617"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="3">Critical Tests</stat>
+<stat fail="0" pass="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Tests" pass="3">Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

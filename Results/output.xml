@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180803 11:04:44.292" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
+<suite source="/home/gigavoice/testsRob/test2.robot" id="s1" name="Test2">
+<test id="s1-t1" name="Lunch Browser">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20180803 11:04:45.704" level="INFO">Opening browser 'ff' to base url 'https://www.google.com'</msg>
+<status status="PASS" endtime="20180803 11:05:19.612" starttime="20180803 11:04:45.703"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180803 11:05:21.598" starttime="20180803 11:05:19.666"></status>
+</kw>
+<status status="PASS" endtime="20180803 11:05:21.598" critical="yes" starttime="20180803 11:04:45.702"></status>
+</test>
+<doc>Tests to verify that the browser lunches</doc>
+<status status="PASS" endtime="20180803 11:05:21.600" starttime="20180803 11:04:44.295"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Test2" pass="1">Test2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180801 11:14:24.416" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
+<suite source="/home/gigavoice/testsRob/tests.robot" id="s1" name="Tests">
+<test id="s1-t1" name="Launching the browser">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180801 11:14:24.568" level="INFO">Opening browser 'firefox' to base url 'https://www.park-your-truck.com'</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20180801 11:14:25.774" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20180801 11:14:25.775" starttime="20180801 11:14:25.770"></status>
+</kw>
+<msg timestamp="20180801 11:14:25.775" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20180801 11:14:25.776" level="FAIL">WebDriverException: Message: Process unexpectedly closed with status 1
+</msg>
+<status status="FAIL" endtime="20180801 11:14:25.777" starttime="20180801 11:14:24.568"></status>
+</kw>
+<status status="FAIL" endtime="20180801 11:14:25.778" critical="yes" starttime="20180801 11:14:24.566">WebDriverException: Message: Process unexpectedly closed with status 1
+</status>
+</test>
+<test id="s1-t2" name="LogIn page">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=html body.cms-home.cms-index-index.page-layout-1column div.page-wrapper div#ssieugdpr-banner.ssieugdpr-banner.ssieugdpr--center center button#gdprok</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20180801 11:14:25.783" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20180801 11:14:25.783" starttime="20180801 11:14:25.780"></status>
+</kw>
+<msg timestamp="20180801 11:14:25.783" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20180801 11:14:25.784" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20180801 11:14:25.784" starttime="20180801 11:14:25.780"></status>
+</kw>
+<status status="FAIL" endtime="20180801 11:14:25.784" critical="yes" starttime="20180801 11:14:25.779">No browser is open</status>
+</test>
+<test id="s1-t3" name="LogOut page">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=body &gt; div.page-wrapper &gt; header &gt; div.header.content &gt; span.signin-logout &gt; a</arg>
+</arguments>
+<msg timestamp="20180801 11:14:25.786" level="INFO">Clicking element 'css=body &gt; div.page-wrapper &gt; header &gt; div.header.content &gt; span.signin-logout &gt; a'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20180801 11:14:25.788" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20180801 11:14:25.788" starttime="20180801 11:14:25.786"></status>
+</kw>
+<msg timestamp="20180801 11:14:25.788" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20180801 11:14:25.789" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20180801 11:14:25.789" starttime="20180801 11:14:25.786"></status>
+</kw>
+<status status="FAIL" endtime="20180801 11:14:25.789" critical="yes" starttime="20180801 11:14:25.785">No browser is open</status>
+</test>
+<doc>Tests to verify that the browser lunches</doc>
+<status status="FAIL" endtime="20180801 11:14:25.790" starttime="20180801 11:14:24.418"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="3" pass="0">Critical Tests</stat>
+<stat fail="3" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="3" id="s1" name="Tests" pass="0">Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20180801 11:14:25.775" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20180801 11:14:25.783" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20180801 11:14:25.788" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+</errors>
+</robot>
