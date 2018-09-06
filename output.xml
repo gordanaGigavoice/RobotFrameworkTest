@@ -1,43 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20180807 08:43:48.612" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
-<suite source="/home/gigavoice/testsRob/test2.robot" id="s1" name="Test2">
-<test id="s1-t1" name="Lunch Browser">
-<kw name="Set Environment Variable" library="OperatingSystem">
-<doc>Sets an environment variable to a specified value.</doc>
-<arguments>
-<arg>chromedriver</arg>
-<arg>/home/gigavoice/testsRob/chromedriver</arg>
-</arguments>
-<msg timestamp="20180807 08:43:48.783" level="INFO">Environment variable 'chromedriver' set to value '/home/gigavoice/testsRob/chromedriver'.</msg>
-<status status="PASS" endtime="20180807 08:43:48.783" starttime="20180807 08:43:48.783"></status>
-</kw>
+<robot generated="20180906 09:50:48.392" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
+<suite source="/home/gigavoice/testsRob/tests.robot" id="s1" name="Tests">
+<test id="s1-t1" name="Launching the browser">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to the given ``url``.</doc>
 <arguments>
-<arg>https://www.google.com</arg>
-<arg>chrome</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>None</arg>
+<arg>http://192.168.3.211:4445/wd/hub</arg>
 </arguments>
-<msg timestamp="20180807 08:43:48.784" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
-<status status="PASS" endtime="20180807 08:43:55.380" starttime="20180807 08:43:48.784"></status>
+<msg timestamp="20180906 09:50:49.451" level="INFO">Opening browser 'chrome' to base url 'https://www.park-your-truck.com' through remote server at 'http://192.168.3.211:4445/wd/hub'.</msg>
+<status status="PASS" endtime="20180906 09:51:38.434" starttime="20180906 09:50:49.451"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180906 09:51:38.563" starttime="20180906 09:51:38.434"></status>
+</kw>
+<status status="PASS" endtime="20180906 09:51:38.563" critical="yes" starttime="20180906 09:50:49.449"></status>
+</test>
+<test id="s1-t2" name="LogIn page">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>css=html body.cms-home.cms-index-index.page-layout-1column div.page-wrapper div#ssieugdpr-banner.ssieugdpr-banner.ssieugdpr--center center button#gdprok</arg>
+</arguments>
+<status status="PASS" endtime="20180906 09:51:42.878" starttime="20180906 09:51:38.566"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>css=html body.cms-home.cms-index-index.page-layout-1column div.page-wrapper div#ssieugdpr-banner.ssieugdpr-banner.ssieugdpr--center center button#gdprok</arg>
+</arguments>
+<msg timestamp="20180906 09:51:42.879" level="INFO">Clicking element 'css=html body.cms-home.cms-index-index.page-layout-1column div.page-wrapper div#ssieugdpr-banner.ssieugdpr-banner.ssieugdpr--center center button#gdprok'.</msg>
+<status status="PASS" endtime="20180906 09:51:43.037" starttime="20180906 09:51:42.878"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>css=body &gt; div.page-wrapper &gt; div &gt; div &gt; div.frontpage-reg-request-btns &gt; a</arg>
+<arg>2</arg>
+</arguments>
+<status status="PASS" endtime="20180906 09:51:43.138" starttime="20180906 09:51:43.038"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>css=body &gt; div.page-wrapper &gt; div &gt; div &gt; div.frontpage-reg-request-btns &gt; a</arg>
+</arguments>
+<msg timestamp="20180906 09:51:43.139" level="INFO">Clicking element 'css=body &gt; div.page-wrapper &gt; div &gt; div &gt; div.frontpage-reg-request-btns &gt; a'.</msg>
+<status status="PASS" endtime="20180906 09:51:44.502" starttime="20180906 09:51:43.138"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Email}</arg>
+<arg>${USERNAME}</arg>
+</arguments>
+<msg timestamp="20180906 09:51:44.503" level="INFO">Typing text 'gdonev@ssidecisions.com' into text field 'xpath=//*[@id="email"]'.</msg>
+<status status="PASS" endtime="20180906 09:51:45.160" starttime="20180906 09:51:44.502"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="pass"]</arg>
+<arg>${PASS}</arg>
+</arguments>
+<msg timestamp="20180906 09:51:45.161" level="INFO">Typing text 'pass.1234' into text field 'xpath=//*[@id="pass"]'.</msg>
+<status status="PASS" endtime="20180906 09:51:45.454" starttime="20180906 09:51:45.161"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>css=#send2</arg>
+</arguments>
+<msg timestamp="20180906 09:51:45.455" level="INFO">Clicking button 'css=#send2'.</msg>
+<status status="PASS" endtime="20180906 09:51:47.324" starttime="20180906 09:51:45.454"></status>
+</kw>
+<status status="PASS" endtime="20180906 09:51:47.325" critical="yes" starttime="20180906 09:51:38.564"></status>
+</test>
+<test id="s1-t3" name="LogOut page">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>css=body &gt; div.page-wrapper &gt; header &gt; div.header.content &gt; span.signin-logout &gt; a</arg>
+</arguments>
+<msg timestamp="20180906 09:51:47.327" level="INFO">Clicking element 'css=body &gt; div.page-wrapper &gt; header &gt; div.header.content &gt; span.signin-logout &gt; a'.</msg>
+<status status="PASS" endtime="20180906 09:51:48.989" starttime="20180906 09:51:47.327"></status>
 </kw>
 <kw name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20180807 08:43:55.548" starttime="20180807 08:43:55.381"></status>
+<status status="PASS" endtime="20180906 09:51:50.306" starttime="20180906 09:51:48.989"></status>
 </kw>
-<status status="PASS" endtime="20180807 08:43:55.548" critical="yes" starttime="20180807 08:43:48.781"></status>
+<status status="PASS" endtime="20180906 09:51:50.306" critical="yes" starttime="20180906 09:51:47.326"></status>
 </test>
 <doc>Tests to verify that the browser lunches</doc>
-<status status="PASS" endtime="20180807 08:43:55.549" starttime="20180807 08:43:48.614"></status>
+<status status="PASS" endtime="20180906 09:51:50.308" starttime="20180906 09:50:48.407"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="1">Critical Tests</stat>
-<stat fail="0" pass="1">All Tests</stat>
+<stat fail="0" pass="3">Critical Tests</stat>
+<stat fail="0" pass="3">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="Test2" pass="1">Test2</stat>
+<stat fail="0" id="s1" name="Tests" pass="3">Tests</stat>
 </suite>
 </statistics>
 <errors>

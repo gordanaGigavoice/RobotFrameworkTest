@@ -8,7 +8,7 @@ Library           	OperatingSystem
              
 Lunch Browser
         
-	Set Environment Variable	chromedriver		/home/gigavoice/testsRob/chromedriver
+	Set Environment Variable	chromedriver		/usr/bin/
 		
 	Open Browser		https://www.google.com		chrome		None		http://localhost:4445/wd/hub
 	Close Browser
