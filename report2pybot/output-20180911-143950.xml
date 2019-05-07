@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180911 14:39:50.401" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
+<suite source="/home/gigavoice/testsRob/test2.robot" id="s1" name="Test2">
+<test id="s1-t1" name="Lunch Browser">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>${BROWSER}</arg>
+<arg>None</arg>
+<arg>http://192.168.3.211:4445/wd/hub</arg>
+</arguments>
+<msg timestamp="20180911 14:39:50.575" level="INFO">Opening browser 'ff' to base url 'https://www.google.com' through remote server at 'http://192.168.3.211:4445/wd/hub'.</msg>
+<status status="PASS" endtime="20180911 14:39:58.145" starttime="20180911 14:39:50.574"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180911 14:39:58.296" starttime="20180911 14:39:58.146"></status>
+</kw>
+<kw name="Get Title" library="Selenium2Library">
+<doc>Returns the title of current page.</doc>
+<status status="PASS" endtime="20180911 14:39:58.330" starttime="20180911 14:39:58.297"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180911 14:40:02.152" starttime="20180911 14:39:58.330"></status>
+</kw>
+<status status="PASS" endtime="20180911 14:40:02.153" critical="yes" starttime="20180911 14:39:50.573"></status>
+</test>
+<doc>Tests to verify that the browser lunches</doc>
+<status status="PASS" endtime="20180911 14:40:02.154" starttime="20180911 14:39:50.403"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Test2" pass="1">Test2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

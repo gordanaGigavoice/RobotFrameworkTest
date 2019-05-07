@@ -16,7 +16,7 @@ Launching the browser
         
 	
 
-	Open Browser	${URL}	${BROWSER}	None	http://192.168.3.211:4445/wd/hub
+	Open Browser	${URL}	${BROWSER}	None	http://192.168.1.58:4445/wd/hub
 	Maximize Browser Window
 
 LogIn page

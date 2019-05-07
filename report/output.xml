@@ -1,86 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20180814 15:59:43.221" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
+<robot generated="20180910 12:22:28.550" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
 <suite source="/home/gigavoice/testsRob/test2.robot" id="s1" name="Test2">
 <test id="s1-t1" name="Lunch Browser">
+<kw name="Set Environment Variable" library="OperatingSystem">
+<doc>Sets an environment variable to a specified value.</doc>
+<arguments>
+<arg>chromedriver</arg>
+<arg>/usr/bin/</arg>
+</arguments>
+<msg timestamp="20180910 12:22:28.744" level="INFO">Environment variable 'chromedriver' set to value '/usr/bin/'.</msg>
+<status status="PASS" endtime="20180910 12:22:28.744" starttime="20180910 12:22:28.743"></status>
+</kw>
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to the given ``url``.</doc>
 <arguments>
 <arg>https://www.google.com</arg>
 <arg>chrome</arg>
 <arg>None</arg>
-<arg>http://localhost:4444/wd/hub</arg>
+<arg>http://localhost:4445/wd/hub</arg>
 </arguments>
-<msg timestamp="20180814 15:59:43.396" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com' through remote server at 'http://localhost:4444/wd/hub'.</msg>
+<msg timestamp="20180910 12:22:28.745" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com' through remote server at 'http://localhost:4445/wd/hub'.</msg>
+<msg timestamp="20180910 12:22:28.746" level="INFO">Could not connect to port 4445 on host localhost</msg>
+<msg timestamp="20180910 12:22:28.746" level="INFO">Could not get IP address for host: localhost</msg>
+<msg timestamp="20180910 12:22:28.752" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fbeca862d10&gt;: Failed to establish a new connection: [Errno 111] Connection refused',)': /wd/hub/session</msg>
+<msg timestamp="20180910 12:22:28.753" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fbeca862e50&gt;: Failed to establish a new connection: [Errno 111] Connection refused',)': /wd/hub/session</msg>
+<msg timestamp="20180910 12:22:28.754" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fbeca862fd0&gt;: Failed to establish a new connection: [Errno 111] Connection refused',)': /wd/hub/session</msg>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20180814 15:59:43.426" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<status status="PASS" endtime="20180814 15:59:43.426" starttime="20180814 15:59:43.425"></status>
+<msg timestamp="20180910 12:22:28.755" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" endtime="20180910 12:22:28.756" starttime="20180910 12:22:28.755"></status>
 </kw>
-<msg timestamp="20180814 15:59:43.428" level="FAIL">WebDriverException: Message: Error forwarding the new session Empty pool of VM for setup Capabilities {browserName: chrome, version: }
-Stacktrace:
-    at org.openqa.grid.web.servlet.handler.RequestHandler.process (RequestHandler.java:118)
-    at org.openqa.grid.web.servlet.DriverServlet.process (DriverServlet.java:86)
-    at org.openqa.grid.web.servlet.DriverServlet.doPost (DriverServlet.java:70)
-    at javax.servlet.http.HttpServlet.service (HttpServlet.java:707)
-    at javax.servlet.http.HttpServlet.service (HttpServlet.java:790)
-    at org.seleniumhq.jetty9.servlet.ServletHolder.handle (ServletHolder.java:860)
-    at org.seleniumhq.jetty9.servlet.ServletHandler.doHandle (ServletHandler.java:535)
-    at org.seleniumhq.jetty9.server.handler.ScopedHandler.handle (ScopedHandler.java:143)
-    at org.seleniumhq.jetty9.security.SecurityHandler.handle (SecurityHandler.java:548)
-    at org.seleniumhq.jetty9.server.handler.HandlerWrapper.handle (HandlerWrapper.java:132)
-    at org.seleniumhq.jetty9.server.handler.ScopedHandler.nextHandle (ScopedHandler.java:190)
-    at org.seleniumhq.jetty9.server.session.SessionHandler.doHandle (SessionHandler.java:1595)
-    at org.seleniumhq.jetty9.server.handler.ScopedHandler.nextHandle (ScopedHandler.java:188)
-    at org.seleniumhq.jetty9.server.handler.ContextHandler.doHandle (ContextHandler.java:1253)
-    at org.seleniumhq.jetty9.server.handler.ScopedHandler.nextScope (ScopedHandler.java:168)
-    at org.seleniumhq.jetty9.servlet.ServletHandler.doScope (ServletHandler.java:473)
-    at org.seleniumhq.jetty9.server.session.SessionHandler.doScope (SessionHandler.java:1564)
-    at org.seleniumhq.jetty9.server.handler.ScopedHandler.nextScope (ScopedHandler.java:166)
-    at org.seleniumhq.jetty9.server.handler.ContextHandler.doScope (ContextHandler.java:1155)
-    at org.seleniumhq.jetty9.server.handler.ScopedHandler.handle (ScopedHandler.java:141)
-    at org.seleniumhq.jetty9.server.handler.HandlerWrapper.handle (HandlerWrapper.java:132)
-    at org.seleniumhq.jetty9.server.Server.handle (Server.java:530)
-    at org.seleniumhq.jetty9.server.HttpChannel.handle (HttpChannel.java:347)
-    at org.seleniumhq.jetty9.server.HttpConnection.onFillable (HttpConnection.java:256)
-    at org.seleniumhq.jetty9.io.AbstractConnection$ReadCallback.succeeded (AbstractConnection.java:279)
-    at org.seleniumhq.jetty9.io.FillInterest.fillable (FillInterest.java:102)
-    at org.seleniumhq.jetty9.io.ChannelEndPoint$2.run (ChannelEndPoint.java:124)
-    at org.seleniumhq.jetty9.util.thread.strategy.EatWhatYouKill.doProduce (EatWhatYouKill.java:247)
-    at org.seleniumhq.jetty9.util.thread.strategy.EatWhatYouKill.produce (EatWhatYouKill.java:140)
-    at org.seleniumhq.jetty9.util.thread.strategy.EatWhatYouKill.run (EatWhatYouKill.java:131)
-    at org.seleniumhq.jetty9.util.thread.ReservedThreadExecutor$ReservedThread.run (ReservedThreadExecutor.java:382)
-    at org.seleniumhq.jetty9.util.thread.QueuedThreadPool.runJob (QueuedThreadPool.java:708)
-    at org.seleniumhq.jetty9.util.thread.QueuedThreadPool$2.run (QueuedThreadPool.java:626)
-    at java.lang.Thread.run (Thread.java:748)</msg>
-<status status="FAIL" endtime="20180814 15:59:43.428" starttime="20180814 15:59:43.396"></status>
+<msg timestamp="20180910 12:22:28.758" level="FAIL">MaxRetryError: HTTPConnectionPool(host='localhost', port=4445): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fbeca862790&gt;: Failed to establish a new connection: [Errno 111] Connection refused',))</msg>
+<status status="FAIL" endtime="20180910 12:22:28.758" starttime="20180910 12:22:28.744"></status>
 </kw>
-<status status="FAIL" endtime="20180814 15:59:43.429" critical="yes" starttime="20180814 15:59:43.394">WebDriverException: Message: Error forwarding the new session Empty pool of VM for setup Capabilities {browserName: chrome, version: }
-Stacktrace:
-    at org.openqa.grid.web.servlet.handler.RequestHandler.process (RequestHandler.java:118)
-    at org.openqa.grid.web.servlet.DriverServlet.process (DriverServlet.java:86)
-    at org.openqa.grid.web.servlet.DriverServlet.doPost (DriverServlet.java:70)
-    at javax.servlet.http.HttpServlet.service (HttpServlet.java:707)
-    at javax.servlet.http.HttpServlet.service (HttpServlet.java:790)
-    at org.seleniumhq.jetty9.servlet.ServletHolder.handle (ServletHolder.java:860)
-    at org.seleniumhq.jetty9.servlet.ServletHandler.doHandle (ServletHandler.java:535)
-    at org.seleniumhq.jetty9.server.handler.ScopedHandler.handle (ScopedHandler.java:143)
-    at org.seleniumhq.jetty9.security.SecurityHandler.handle (SecurityHandler.java:548)
-    at org.seleniumhq.jetty9.server.handler.HandlerWrapper.handle (HandlerW...
-    [ Message content over the limit has been removed. ]
-    at org.seleniumhq.jetty9.server.HttpConnection.onFillable (HttpConnection.java:256)
-    at org.seleniumhq.jetty9.io.AbstractConnection$ReadCallback.succeeded (AbstractConnection.java:279)
-    at org.seleniumhq.jetty9.io.FillInterest.fillable (FillInterest.java:102)
-    at org.seleniumhq.jetty9.io.ChannelEndPoint$2.run (ChannelEndPoint.java:124)
-    at org.seleniumhq.jetty9.util.thread.strategy.EatWhatYouKill.doProduce (EatWhatYouKill.java:247)
-    at org.seleniumhq.jetty9.util.thread.strategy.EatWhatYouKill.produce (EatWhatYouKill.java:140)
-    at org.seleniumhq.jetty9.util.thread.strategy.EatWhatYouKill.run (EatWhatYouKill.java:131)
-    at org.seleniumhq.jetty9.util.thread.ReservedThreadExecutor$ReservedThread.run (ReservedThreadExecutor.java:382)
-    at org.seleniumhq.jetty9.util.thread.QueuedThreadPool.runJob (QueuedThreadPool.java:708)
-    at org.seleniumhq.jetty9.util.thread.QueuedThreadPool$2.run (QueuedThreadPool.java:626)
-    at java.lang.Thread.run (Thread.java:748)</status>
+<status status="FAIL" endtime="20180910 12:22:28.758" critical="yes" starttime="20180910 12:22:28.742">MaxRetryError: HTTPConnectionPool(host='localhost', port=4445): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fbeca862790&gt;: Failed to establish a new connection: [Errno 111] Connection refused',))</status>
 </test>
 <doc>Tests to verify that the browser lunches</doc>
-<status status="FAIL" endtime="20180814 15:59:43.431" starttime="20180814 15:59:43.223"></status>
+<status status="FAIL" endtime="20180910 12:22:28.760" starttime="20180910 12:22:28.552"></status>
 </suite>
 <statistics>
 <total>
@@ -94,5 +50,8 @@ Stacktrace:
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20180910 12:22:28.752" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fbeca862d10&gt;: Failed to establish a new connection: [Errno 111] Connection refused',)': /wd/hub/session</msg>
+<msg timestamp="20180910 12:22:28.753" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fbeca862e50&gt;: Failed to establish a new connection: [Errno 111] Connection refused',)': /wd/hub/session</msg>
+<msg timestamp="20180910 12:22:28.754" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fbeca862fd0&gt;: Failed to establish a new connection: [Errno 111] Connection refused',)': /wd/hub/session</msg>
 </errors>
 </robot>
