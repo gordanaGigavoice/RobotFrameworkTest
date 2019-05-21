@@ -4,15 +4,15 @@ Library			Selenium2Library
 Library           	OperatingSystem
 
 ***Variables***
-${BROWSER}	chrome
+@{BROWSERS}	 	chrome 	ff
 
 *** Test Cases ***
              
 Lunch Browser
         
-	
+	:FOR 	${BROWSER}	 IN 	@{BROWSERS}
 		
-	Open Browser		https://www.google.com		${BROWSER}		None		http://192.168.3.211:4445/wd/hub
-	Maximize Browser Window
-	Get Title
-	Close Browser
+	\	Open Browser		https://www.google.com		${BROWSER}		None		http://192.168.1.58:4445/wd/hub
+	\	Maximize Browser Window
+	\	Get Title
+	\	Close Browser

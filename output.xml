@@ -1,111 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20190507 13:51:58.332" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
-<suite source="/home/gigavoice/testsRob/tests.robot" id="s1" name="Tests">
-<test id="s1-t1" name="Launching the browser">
+<robot generated="20190520 11:11:01.088" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
+<suite source="/home/gigavoice/testsRob/test2.robot" id="s1" name="Test2">
+<test id="s1-t1" name="Lunch Browser">
+<kw type="for" name="${BROWSER} IN [ @{BROWSERS} ]">
+<kw type="foritem" name="${BROWSER} = chrome">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to the given ``url``.</doc>
 <arguments>
-<arg>${URL}</arg>
+<arg>https://www.google.com</arg>
 <arg>${BROWSER}</arg>
-<arg>None</arg>
-<arg>http://192.168.1.58:4445/wd/hub</arg>
 </arguments>
-<msg timestamp="20190507 13:51:58.492" level="INFO">Opening browser 'chrome' to base url 'https://www.park-your-truck.com' through remote server at 'http://192.168.1.58:4445/wd/hub'.</msg>
-<status status="PASS" endtime="20190507 13:52:04.779" starttime="20190507 13:51:58.491"></status>
+<msg timestamp="20190520 11:11:01.268" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<status status="PASS" endtime="20190520 11:11:04.511" starttime="20190520 11:11:01.268"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20190507 13:52:04.915" starttime="20190507 13:52:04.779"></status>
+<status status="PASS" endtime="20190520 11:11:04.617" starttime="20190520 11:11:04.511"></status>
 </kw>
-<status status="PASS" endtime="20190507 13:52:04.915" critical="yes" starttime="20190507 13:51:58.490"></status>
-</test>
-<test id="s1-t2" name="LogIn page">
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element ``locator`` is visible.</doc>
-<arguments>
-<arg>css=html body.cms-home.cms-index-index.page-layout-1column div.page-wrapper div#ssieugdpr-banner.ssieugdpr-banner.ssieugdpr--center center button#gdprok</arg>
-</arguments>
-<status status="PASS" endtime="20190507 13:52:05.037" starttime="20190507 13:52:04.918"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>css=html body.cms-home.cms-index-index.page-layout-1column div.page-wrapper div#ssieugdpr-banner.ssieugdpr-banner.ssieugdpr--center center button#gdprok</arg>
-</arguments>
-<msg timestamp="20190507 13:52:05.038" level="INFO">Clicking element 'css=html body.cms-home.cms-index-index.page-layout-1column div.page-wrapper div#ssieugdpr-banner.ssieugdpr-banner.ssieugdpr--center center button#gdprok'.</msg>
-<status status="PASS" endtime="20190507 13:52:05.231" starttime="20190507 13:52:05.037"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element ``locator`` is visible.</doc>
-<arguments>
-<arg>css=body &gt; div.page-wrapper &gt; div &gt; div &gt; div.frontpage-reg-request-btns &gt; a</arg>
-<arg>2</arg>
-</arguments>
-<status status="PASS" endtime="20190507 13:52:05.365" starttime="20190507 13:52:05.232"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>css=body &gt; div.page-wrapper &gt; div &gt; div &gt; div.frontpage-reg-request-btns &gt; a</arg>
-</arguments>
-<msg timestamp="20190507 13:52:05.366" level="INFO">Clicking element 'css=body &gt; div.page-wrapper &gt; div &gt; div &gt; div.frontpage-reg-request-btns &gt; a'.</msg>
-<status status="PASS" endtime="20190507 13:52:06.577" starttime="20190507 13:52:05.366"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${Email}</arg>
-<arg>${USERNAME}</arg>
-</arguments>
-<msg timestamp="20190507 13:52:06.578" level="INFO">Typing text 'gdonev@ssidecisions.com' into text field 'xpath=//*[@id="email"]'.</msg>
-<status status="PASS" endtime="20190507 13:52:07.076" starttime="20190507 13:52:06.577"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>xpath=//*[@id="pass"]</arg>
-<arg>${PASS}</arg>
-</arguments>
-<msg timestamp="20190507 13:52:07.077" level="INFO">Typing text 'pass.1234' into text field 'xpath=//*[@id="pass"]'.</msg>
-<status status="PASS" endtime="20190507 13:52:07.320" starttime="20190507 13:52:07.077"></status>
-</kw>
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks button identified by ``locator``.</doc>
-<arguments>
-<arg>css=#send2</arg>
-</arguments>
-<msg timestamp="20190507 13:52:07.321" level="INFO">Clicking button 'css=#send2'.</msg>
-<status status="PASS" endtime="20190507 13:52:09.284" starttime="20190507 13:52:07.321"></status>
-</kw>
-<status status="PASS" endtime="20190507 13:52:09.285" critical="yes" starttime="20190507 13:52:04.916"></status>
-</test>
-<test id="s1-t3" name="LogOut page">
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>css=body &gt; div.page-wrapper &gt; header &gt; div.header.content &gt; span.signin-logout &gt; a</arg>
-</arguments>
-<msg timestamp="20190507 13:52:09.287" level="INFO">Clicking element 'css=body &gt; div.page-wrapper &gt; header &gt; div.header.content &gt; span.signin-logout &gt; a'.</msg>
-<status status="PASS" endtime="20190507 13:52:10.669" starttime="20190507 13:52:09.287"></status>
+<kw name="Get Title" library="Selenium2Library">
+<doc>Returns the title of current page.</doc>
+<status status="PASS" endtime="20190520 11:11:04.628" starttime="20190520 11:11:04.618"></status>
 </kw>
 <kw name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20190507 13:52:10.744" starttime="20190507 13:52:10.669"></status>
+<status status="PASS" endtime="20190520 11:11:04.698" starttime="20190520 11:11:04.628"></status>
 </kw>
-<status status="PASS" endtime="20190507 13:52:10.744" critical="yes" starttime="20190507 13:52:09.286"></status>
+<status status="PASS" endtime="20190520 11:11:04.698" starttime="20190520 11:11:01.268"></status>
+</kw>
+<kw type="foritem" name="${BROWSER} = ff">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190520 11:11:04.699" level="INFO">Opening browser 'ff' to base url 'https://www.google.com'.</msg>
+<status status="PASS" endtime="20190520 11:11:12.204" starttime="20190520 11:11:04.698"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20190520 11:11:12.507" starttime="20190520 11:11:12.204"></status>
+</kw>
+<kw name="Get Title" library="Selenium2Library">
+<doc>Returns the title of current page.</doc>
+<status status="PASS" endtime="20190520 11:11:12.513" starttime="20190520 11:11:12.507"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20190520 11:11:13.836" starttime="20190520 11:11:12.513"></status>
+</kw>
+<status status="PASS" endtime="20190520 11:11:13.836" starttime="20190520 11:11:04.698"></status>
+</kw>
+<status status="PASS" endtime="20190520 11:11:13.836" starttime="20190520 11:11:01.267"></status>
+</kw>
+<status status="PASS" endtime="20190520 11:11:13.836" critical="yes" starttime="20190520 11:11:01.266"></status>
 </test>
 <doc>Tests to verify that the browser lunches</doc>
-<status status="PASS" endtime="20190507 13:52:10.746" starttime="20190507 13:51:58.334"></status>
+<status status="PASS" endtime="20190520 11:11:13.838" starttime="20190520 11:11:01.090"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="3">Critical Tests</stat>
-<stat fail="0" pass="3">All Tests</stat>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="Tests" pass="3">Tests</stat>
+<stat fail="0" id="s1" name="Test2" pass="1">Test2</stat>
 </suite>
 </statistics>
 <errors>
